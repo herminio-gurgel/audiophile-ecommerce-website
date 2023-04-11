@@ -1,21 +1,18 @@
 <template>
-    <NavBar :logo="logo_src" :alt="app_name"></NavBar>
+    <NavBar></NavBar>
     <router-view/>
+    <Footer></Footer>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
     components: {
+        Footer,
         NavBar
     },
-    data() {
-        return {
-            logo_src: '/img/logo.svg',
-            app_name: 'audiophile'
-        }
-    }
 }
 </script>
 

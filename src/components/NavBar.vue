@@ -1,37 +1,42 @@
 <template>
-    <nav>
-        <div class="nav-wrapper">
-            <router-link to="/"><a class="brand-logo"><img :src="logo" :alt="alt"></a></router-link>
-            <ul class="right">
-                <li>
-                    <router-link to="/">HOME</router-link>
-                </li>
-                <li>
-                    <router-link to="/headphones">HEADPHONES</router-link>
-                </li>
-                <li>
-                    <router-link to="/speakers">SPEAKERS</router-link>
-                </li>
-                <li>
-                    <router-link to="/earphones">EARPHONES</router-link>
-                </li>
-                <li>
-                    <router-link to="/about"><i class="material-icons">shopping_cart</i></router-link>
-                </li>
-            </ul>
+    <nav class="nav-backgroud">
+        <div class="nav-wrapper container">
+            <div class="row">
+                <div class="col l3">
+                    <a class="brand-logo">
+                        <BrandLogo></BrandLogo>
+                    </a>
+                </div>
+                <div class="col l8">
+                    <NavLinks class="left hide-on-med-and-down "></NavLinks>
+                </div>
+                <div class="col l1">
+                    <IconMenu></IconMenu>
+                </div>
+            </div>
         </div>
     </nav>
 </template>
 
 <script>
 
+import BrandLogo from "@/components/navbar/BrandLogo.vue";
+import NavLinks from "@/components/navbar/NavLinks.vue";
+import IconMenu from "@/components/navbar/IconMenu.vue";
+
 export default {
     name: "NavBar",
-    props: ["logo", "alt"]
+    components: {IconMenu, NavLinks, BrandLogo}
 }
 
 </script>
 
 <style scoped>
+.nav-backgroud{
+    background-color: #191919;
+}
 
+.nav-backgroud :hover{
+    background-color: transparent;
+}
 </style>
