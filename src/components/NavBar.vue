@@ -33,7 +33,7 @@ export default {
 
 <style scoped>
 .nav-backgroud{
-    background-color: #191919;
+    background-color: #000000;
 }
 
 .nav-backgroud :hover{
